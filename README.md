@@ -15,5 +15,19 @@ pip3 install -r requirements.txt
 Make sure to activate the virtual environment.
 
 ```
+source blockchain-env/bin/activate
+```
+
+To check, you can run
+
+```
+echo $VIRTUAL_ENV
+```
+
+if you get nothing back, means you are not in it.
+
+RUn the test
+
+```
 python3-m pytest backent/tests
 ```
