@@ -26,7 +26,7 @@ echo $VIRTUAL_ENV
 
 if you get nothing back, means you are not in it.
 
-RUn the test
+Run the test
 
 ```
 python3-m pytest backent/tests

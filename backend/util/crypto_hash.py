@@ -10,7 +10,7 @@ def crypto_hash(*args):
 	
 	joined_data = ''.join(stringified_args)
 
-	print(f'join_data: {joined_data}')
+	# print(f'join_data: {joined_data}')
 
 	return hashlib.sha256(joined_data.encode('utf-8')).hexdigest()
 
