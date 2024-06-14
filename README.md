@@ -31,3 +31,11 @@ Run the test
 ```
 python3-m pytest backent/tests
 ```
+
+**Run the application and API**
+
+Make sure to activate the virtual enviroment.
+
+```
+python3 -m backend.app
+```
