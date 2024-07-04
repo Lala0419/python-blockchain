@@ -33,14 +33,14 @@ class Wallet:
             ec.ECDSA(hashes.SHA256())
         ))
 
-        def serialize_public_key(self):
-            """
-            Reset the public key to its serialized version.
-            """
-            self.public_key = self.public_key.public_bytes(
-                encoding=serialization.Encoding.PEM,
-                format=serialization.PublicFormat.SubjectPublicKeyInfo
-        ).decode('utf-8')
+    def serialize_public_key(self):
+        """
+        Reset the public key to its serialized version.
+        """
+        self.public_key = self.public_key.public_bytes(
+            encoding=serialization.Encoding.PEM,
+            format=serialization.PublicFormat.SubjectPublicKeyInfo
+    ).decode('utf-8')
 
     @staticmethod
     def verify(public_key, data, signature):
