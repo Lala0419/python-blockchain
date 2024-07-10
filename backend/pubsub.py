@@ -25,7 +25,7 @@ class Listener(SubscribeCallback):
         self.transaction_pool = transaction_pool
 
     def message(self, pubnub, message_object):
-        print(f'\n-- Incoming message_object: {message_object} | Message: {message_object.message}')
+        print(f'\n-- Channel: {message_object.channel} | Message: {message_object.message}')
 
         if message_object.channel == CHANNELS['BLOCK']:
             block = Block.from_json(message_object.message)
@@ -72,11 +72,11 @@ class PubSub():
         """
         self.publish(CHANNELS['BLOCK'], block.to_json())
 
-    def broadcast_block(self, transaction):
-        """
-        Broadcast a transaction object to all nodes.
-        """
-        self.publish(CHANNELS['TRANSACTION'], transaction.to_json())
+    # def broadcast_block(self, transaction):
+    #     """
+    #     Broadcast a transaction object to all nodes.
+    #     """
+    #     self.publish(CHANNELS['TRANSACTION'], transaction.to_json())
 
     def broadcast_transaction(self, transaction):
         """
