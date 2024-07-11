@@ -1,12 +1,6 @@
-body {
-	background-color: #444;
-	color: #fff;
-	text-align: center;
-	font-size: 18px;
-	font-family: "Quicksand";
-	padding-top: 5%;
-	word-wrap: break-word;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .logo {
 	width: 250px;
@@ -38,16 +32,4 @@ body {
 .TransactionPool {
 	margin: 10%;
 	margin-top: 5%;
-}
-
-a,
-a:hover {
-	color: #e66;
-	text-decoration: underline;
-}
-
-input,
-button {
-	color: black;
-	margin: 0.5rem;
 }
