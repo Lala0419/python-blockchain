@@ -11,10 +11,10 @@ const Helo = ({ isMobile }) => {
 	}, []);
 	return (
 		<>
-			<h3>Welcome to NaynayChain</h3>
+			<h3 className="text-[2.5rem] lg:text-[3rem]">Welcome to NaynayChain</h3>
 			<section
 				// className={`px-6 pb-[15.5rem] md:pb-[22rem] lg:pb-[14rem] max-w-[100vw] h-[50rem]`}
-				className={isMobile ? `w-[100vw] h-[30rem]` : `w-[100vw] h-[50rem]`}
+				className="w-[100vw] h-[20rem] sm-h:h-[30rem] md-h:h-[50rem] lg-h:h-[70rem] xl-h:h-[90rem]"
 			>
 				<NinjaCanvas />
 			</section>

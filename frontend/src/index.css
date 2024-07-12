@@ -19,16 +19,17 @@ a:hover {
 
 body {
 	margin: 0;
-	/* display: flex; */
+	display: flex;
 	justify-content: center;
 	/* place-items: center; */
+	width: 100vh;
 	min-width: 320px;
 	min-height: 100vh;
 	width: 100%;
 	background-color: #444;
 	color: #fff;
 	text-align: center;
-	font-size: 18px;
+	font-size: 2rem;
 	font-family: "Quicksand";
 	padding-top: 5%;
 	word-wrap: break-word;
@@ -75,4 +76,36 @@ button {
 	button {
 		background-color: #f9f9f9;
 	}
+}
+
+.logo {
+	width: 250px;
+	height: 250px;
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.WalletInfo {
+	max-width: 500px;
+}
+
+.Block {
+	border: 1px solid #fff;
+	padding: 10%;
+	margin: 2%;
+}
+
+.Transaction {
+	padding: 5%;
+}
+
+.Blockchain,
+.ConductTransaction,
+.TransactionPool {
+	margin: 10%;
+	margin-top: 5%;
 }

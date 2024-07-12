@@ -1,4 +1,3 @@
-import "./main.css";
 import React, { useState } from "react";
 import Helo from "./components/Helo";
 

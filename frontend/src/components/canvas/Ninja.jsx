@@ -30,7 +30,7 @@ const Ninja = ({ isMobile }) => {
 				ref={sceneRef}
 				object={scene}
 				scale={isMobile ? 7 : 6} //do not change this ratio
-				position={isMobile ? 0 : 0}
+				position={[0, isMobile ? -3 : -2, 0]}
 				rotation={[-0.01, -0, -0.1]}
 			/>
 		</mesh>
@@ -67,9 +67,9 @@ const NinjaCanvas = () => {
 			dpr={[1, 2]}
 			camera={{ position: [20, 0, 0], fov: 70 }}
 			gl={{ preserveDrawingBuffer: true }}
-			className={isMobile ? "w-[100vw] !h-[90vh]" : "w-[100vw] !h-[90vh]"}
+			className={"w-[100vw] !h-[90vh]"} //canvas size
 		>
-			<Suspense>
+			<Suspense fallback={<CanvasLoader />}>
 				<OrbitControls
 					enableZoom={false}
 					maxPolarAngle={Math.PI / 2}
