@@ -18,7 +18,7 @@ const Ninja = ({ isMobile }) => {
 		<mesh>
 			<hemisphereLight intensity={2} groundColor="black" />
 			<spotLight
-				position={[20, 0, 0]}
+				position={[0, 0, 0]}
 				angle={1}
 				penumbra={0}
 				intensity={0}
@@ -29,7 +29,7 @@ const Ninja = ({ isMobile }) => {
 			<primitive
 				ref={sceneRef}
 				object={scene}
-				scale={isMobile ? 6 : 6} //do not change this ratio
+				scale={isMobile ? 7 : 6} //do not change this ratio
 				position={isMobile ? 0 : 0}
 				rotation={[-0.01, -0, -0.1]}
 			/>
@@ -67,15 +67,15 @@ const NinjaCanvas = () => {
 			dpr={[1, 2]}
 			camera={{ position: [20, 0, 0], fov: 70 }}
 			gl={{ preserveDrawingBuffer: true }}
-			className="w-[100vw] h-[100vh] flex"
+			className={isMobile ? "w-[100vw] !h-[90vh]" : "w-[100vw] !h-[90vh]"}
 		>
-			<Suspense fallback={<CanvasLoader />}>
+			<Suspense>
 				<OrbitControls
 					enableZoom={false}
 					maxPolarAngle={Math.PI / 2}
-					// minPolarAngle={Math.PI / 2}
+					minPolarAngle={Math.PI / 2}
 				/>
-				<Ninja isMobile={isMobile} className="cursor-pointer" />
+				<Ninja className="cursor-pointer" />
 			</Suspense>
 
 			<Preload all />
