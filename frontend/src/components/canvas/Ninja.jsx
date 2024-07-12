@@ -29,7 +29,7 @@ const Ninja = ({ isMobile }) => {
 			<primitive
 				ref={sceneRef}
 				object={scene}
-				scale={isMobile ? 7 : 6} //do not change this ratio
+				scale={isMobile ? 7 : 7} //do not change this ratio
 				position={[0, isMobile ? -3 : -2, 0]}
 				rotation={[-0.01, -0, -0.1]}
 			/>
@@ -67,7 +67,7 @@ const NinjaCanvas = () => {
 			dpr={[1, 2]}
 			camera={{ position: [20, 0, 0], fov: 70 }}
 			gl={{ preserveDrawingBuffer: true }}
-			className={"w-[100vw] !h-[90vh]"} //canvas size
+			className={"w-full !h-[90vh]"} //canvas size
 		>
 			<Suspense fallback={<CanvasLoader />}>
 				<OrbitControls

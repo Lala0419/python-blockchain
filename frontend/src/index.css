@@ -33,6 +33,7 @@ body {
 	font-family: "Quicksand";
 	padding-top: 5%;
 	word-wrap: break-word;
+	overflow: hidden;
 }
 
 h1 {
