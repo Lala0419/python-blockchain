@@ -10,7 +10,7 @@ export default {
 			xl: "1280px",
 			"sm-h": { raw: "(min-height: 400px)" }, // Custom height breakpoint
 			"md-h": { raw: "(min-height: 600px)" },
-			"lg-h": { raw: "(min-height: 1000px)" },
+			"lg-h": { raw: "(min-height: 800px)" },
 			"xl-h": { raw: "(min-height: 1280px)" },
 		},
 	},
