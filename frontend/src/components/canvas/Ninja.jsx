@@ -18,19 +18,19 @@ const Ninja = ({ isMobile }) => {
 		<mesh>
 			<hemisphereLight intensity={3} groundColor="black" />
 			<spotLight
-				position={[5, 0, 0]}
+				position={[0, -5, 0]}
 				angle={1}
 				penumbra={0}
 				intensity={1}
 				castShadow
 				shadow-mapSize={100}
 			/>
-			<pointLight intensity={40} />
+			<pointLight intensity={10} />
 			<primitive
 				ref={sceneRef}
 				object={scene}
-				scale={isMobile ? 7 : 7} //do not change this ratio
-				position={[0, isMobile ? -3 : -2, 0]}
+				scale={isMobile ? 7 : 9} //do not change this ratio
+				position={[0, isMobile ? -3 : -8, 0]}
 				rotation={[-0.1, -0, -0.01]}
 			/>
 		</mesh>
@@ -67,7 +67,7 @@ const NinjaCanvas = () => {
 			dpr={[1, 2]}
 			camera={{ position: [20, 0, 0], fov: 70 }}
 			gl={{ preserveDrawingBuffer: true }}
-			className={"w-full !h-[65vh]"} //canvas size
+			className={"w-full"} //canvas size
 		>
 			<Suspense fallback={<CanvasLoader />}>
 				<OrbitControls

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { NinjaCanvas } from "./canvas";
 import { API_BASE_URL } from "../config";
 import Blockchain from "./Blockchain";
@@ -19,6 +20,9 @@ const Helo = ({ isMobile }) => {
 			<section className="w-[100vw] h-[10rem] sm-h:h-[20rem] md-h:h-[35rem] lg-h:h-[50rem] xl-h:h-[65rem]">
 				<NinjaCanvas />
 			</section>
+			<Link to="/blockchain">Blockchain</Link>
+			<Link to="/conduct-transaction">Conduct a Transaction</Link>
+			<Link to="/transaction-pool">Transaction Pool</Link>
 			<div className="WalletInfo">
 				<div>Address: {address}</div>
 				<div>Balance: {balance}</div>
