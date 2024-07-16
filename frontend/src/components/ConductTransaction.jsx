@@ -43,7 +43,7 @@ function ConductTransaction() {
 	return (
 		<div className="ConductTransaction">
 			<Link to="/">Home</Link>
-			<hr />
+
 			<h3>Conduct a Transaction</h3>
 			<br />
 			<FormGroup className="form-div">
@@ -71,7 +71,7 @@ function ConductTransaction() {
 			</div>
 			<br />
 			<h4>Known Addresses</h4>
-			<div>
+			<div className="known-address">
 				{knownAddresses.map((knownAddress, i) => (
 					<span key={knownAddress}>
 						<u>{knownAddress}</u>
