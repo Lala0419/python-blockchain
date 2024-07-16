@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import Transaction from "./Transaction";
 import { API_BASE_URL, SECONDS_JS } from "../config";
-import history from "../history";
+import { useNavigate } from "react-router-dom";
 
 const POLL_INTERVAL = 10 * SECONDS_JS;
 
 function TransactionPool() {
 	const [transactions, setTransactions] = useState([]);
+	const navigate = useNavigate();
 
 	const fetchTransactions = () => {
 		fetch(`${API_BASE_URL}/transactions`)
@@ -32,7 +33,7 @@ function TransactionPool() {
 		fetch(`${API_BASE_URL}/blockchain/mine`).then(() => {
 			alert("Success!");
 
-			history.push("/blockchain");
+			navigate("/blockchain");
 		});
 	};
 

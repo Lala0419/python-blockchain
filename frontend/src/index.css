@@ -110,3 +110,14 @@ button {
 	margin-top: 3rem;
 	margin-bottom: 2rem;
 }
+
+.transaction-input {
+	width: 50%;
+}
+
+.form-div {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}

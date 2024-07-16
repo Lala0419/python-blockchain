@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FormGroup, FormControl, Button } from "react-bootstrap";
 import { API_BASE_URL } from "../config";
-import history from "../history";
+import { useNavigate } from "react-router-dom";
 
 function ConductTransaction() {
 	const [amount, setAmount] = useState(0);
 	const [recipient, setRecipient] = useState("");
 	const [knownAddresses, setKnownAddresses] = useState([]);
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		fetch(`${API_BASE_URL}/known-addresses`)
@@ -35,7 +36,7 @@ function ConductTransaction() {
 
 				alert("Success!");
 
-				history.push("/transaction-pool");
+				navigate("/transaction-pool");
 			});
 	};
 
@@ -45,16 +46,18 @@ function ConductTransaction() {
 			<hr />
 			<h3>Conduct a Transaction</h3>
 			<br />
-			<FormGroup>
+			<FormGroup className="form-div">
 				<FormControl
+					className="transaction-input"
 					input="text"
 					placeholder="recipient"
 					value={recipient}
 					onChange={updateRecipient}
 				/>
 			</FormGroup>
-			<FormGroup>
+			<FormGroup className="form-div">
 				<FormControl
+					className="transaction-input"
 					input="number"
 					placeholder="amount"
 					value={amount}

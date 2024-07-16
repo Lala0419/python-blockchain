@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { NinjaCanvas } from "./canvas";
 import { API_BASE_URL } from "../config";
-import Blockchain from "./Blockchain";
+// import Blockchain from "./Blockchain";
 
 const Helo = ({ isMobile }) => {
 	const [walletInfo, setWalletInfo] = useState({});
@@ -27,7 +27,7 @@ const Helo = ({ isMobile }) => {
 				<div>Address: {address}</div>
 				<div>Balance: {balance}</div>
 			</div>
-			<Blockchain />
+			{/* <Blockchain /> */}
 		</>
 	);
 };
